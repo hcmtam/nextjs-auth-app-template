@@ -1,0 +1,55 @@
+.loginFormBox {
+  width: 450px;
+  height: 580px;
+}
+
+.signUpFormBox {
+  width: 450px;
+  height: 500px;
+}
+
+.loginFormSideBox {
+  width: 350px;
+}
+.siteIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.siteIconText {
+  font-size: 18px;
+}
+
+.indicatorBar {
+  left: 3.5rem;
+  width: 11.6rem;
+}
+
+.indicatorIcon {
+  -webkit-animation: iconRunRight 0.4s forwards ease-in;
+  animation: iconRunRight 0.4s forwards ease-in;
+
+  &:after {
+    position: relative;
+    left: 200px;
+    -webkit-transform: translateX(180px);
+    transform: translateX(180px);
+  }
+}
+
+@-webkit-keyframes indicatorIconRun {
+  from {
+    -webkit-transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(180px);
+  }
+}
+@keyframes indicatorIconRun {
+  from {
+    -webkit-transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(180px);
+  }
+}

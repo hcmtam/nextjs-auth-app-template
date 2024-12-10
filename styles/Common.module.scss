@@ -1,0 +1,77 @@
+$small: 500px;
+
+.sideMenu {
+  @media screen and (max-width: $small) {
+    position: absolute;
+  }
+}
+
+.tableTab {
+  height: 90vh;
+}
+
+.insightContainer {
+  flex-direction: row;
+
+  @media screen and (max-width: $small) {
+    flex-direction: column;
+  }
+}
+
+.graphDetailsInsightBox {
+  @media screen and (max-width: $small) {
+    width: auto;
+  }
+}
+
+.smallInsightBox {
+  height: 150px;
+  min-height: 120px;
+}
+
+.mediumInsightBox {
+  height: 250px;
+  min-height: 220px;
+
+  @media screen and (max-width: $small) {
+    height: auto;
+  }
+}
+
+.largeInsightBox {
+  min-height: 300px;
+}
+
+.xlargeInsightBox {
+  height: 500px;
+}
+
+.mediaLeftMargin {
+  margin-left: 0.5rem;
+
+  @media screen and (max-width: $small) {
+    margin-left: auto;
+  }
+}
+
+.mediaRightMargin {
+  margin-right: 0.5rem;
+
+  @media screen and (max-width: $small) {
+    margin-bottom: 1rem;
+  }
+}
+
+.smallMediaRightMargin {
+  margin-right: 1rem;
+
+  @media screen and (max-width: $small) {
+    margin-bottom: 1rem;
+  }
+}
+
+.mediaBottomMargin {
+  @media screen and (max-width: $small) {
+    margin-bottom: 1rem;
+  }
+}
