@@ -44,6 +44,7 @@ export const config = {
   ],
   pages: {
     signIn: "/sign/login",
+    error: "/sign/login",
   },
   session: {
     strategy: "jwt",

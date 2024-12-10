@@ -13,12 +13,18 @@ import {
 } from "../common/form-inputs";
 import { useSignUpContext } from "./SignUpContext";
 import { createUser } from "@/server/authorize";
+import { useRouter } from "next/navigation";
 
 type SignUpFormFields = {
   userEmail: string;
   password: string;
   rePassword: string;
   termsAndConditions: boolean;
+};
+
+const formCreateUser = async (data: SignUpFormFields) => {
+  ("use server");
+  await createUser(data);
 };
 
 export interface SignUpFormInterface {}
@@ -34,15 +40,15 @@ export const SignUpForm: React.FC<SignUpFormInterface> = (
   } = useForm<SignUpFormFields>({});
 
   const { setStep } = useSignUpContext();
+  const { push } = useRouter();
 
   const onFormSubmit: SubmitHandler<SignUpFormFields> = async (
     data: SignUpFormFields
   ) => {
-    console.log(`login`, JSON.stringify(data));
     setStep(2);
 
-    ("use server");
-    await createUser(data);
+    await formCreateUser(data);
+    push(`/sign/login`);
   };
   return (
     <div className="flex justify-center items-center h-full">
