@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
     "@mui/material": "^6.1.5",
