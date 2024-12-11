@@ -10,7 +10,7 @@ import { JWT } from "next-auth/jwt";
 
 const alg = "HS256";
 const ROTATE_PERIOD = 60 * 2;
-const COOKIE_TOKEN_KEY = "next-auth.session-token";
+const COOKIE_TOKEN_KEY = process.env.COOKIE_TOKEN_KEY;
 const jwtKey = new TextEncoder().encode(process.env.NEXTAUTH_SECRET);
 
 export const createUser = async (data: any) => {

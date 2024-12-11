@@ -11,7 +11,7 @@ import {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const isAuthLogin = cookies().get("next-auth.session-token");
+  const isAuthLogin = cookies().get(process.env.COOKIE_TOKEN_KEY);
 
   const isPublicRoute = PUBLIC_ROUTES.includes(pathname);
 

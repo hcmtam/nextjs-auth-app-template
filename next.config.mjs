@@ -5,13 +5,12 @@ const nextConfig = {
     env: {
         NEXTAUTH_URL: process.env.NEXTAUTH_URL,
         NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+        DATABASE_URL: process.env.DATABASE_URL,
+        COOKIE_TOKEN_KEY: process.env.COOKIE_TOKEN_KEY,
         GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
         GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
         GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
         GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-        PIGGY_INSIGHTS_API: process.env.PIGGY_INSIGHTS_API,
-        RECORD_SERVICE: process.env.RECORD_SERVICE,
-        REDIS_URL: process.env.REDIS_URL,
     },
     async headers() {
         return [
