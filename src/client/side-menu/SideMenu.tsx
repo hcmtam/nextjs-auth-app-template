@@ -27,13 +27,7 @@ export const SideMenu: React.FC<SideMenuProps> = (props: SideMenuProps) => {
 
   const sideMenuListLower: SideMenuButtonInterface[] = [];
 
-  const sideMenuListBottom = [
-    {
-      label: "Settings",
-      icon: <SettingsSVG />,
-      url: "settings",
-    },
-  ];
+  const sideMenuListBottom = [];
 
   return (
     <Sidebar
